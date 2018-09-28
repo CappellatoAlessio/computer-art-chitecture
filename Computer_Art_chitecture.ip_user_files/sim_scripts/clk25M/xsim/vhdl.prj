@@ -1,0 +1,4 @@
+vhdl xil_defaultlib  \
+"../../../../BRAMtoVGA.srcs/sources_1/bd/clk25M/sim/clk25M.vhd" \
+
+nosort

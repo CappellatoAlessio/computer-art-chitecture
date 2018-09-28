@@ -1,0 +1,108 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.1 (win64) Build 2188600 Wed Apr  4 18:40:38 MDT 2018
+| Date         : Wed Jul  4 22:51:03 2018
+| Host         : AC running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file top_level_control_sets_placed.rpt
+| Design       : top_level
+| Device       : xc7a100t
+--------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |    34 |
+| Unused register locations in slices containing registers |    98 |
++----------------------------------------------------------+-------+
+
+
+2. Histogram
+------------
+
++--------+--------------+
+| Fanout | Control Sets |
++--------+--------------+
+|      3 |            2 |
+|      4 |            3 |
+|      5 |            2 |
+|      6 |            3 |
+|      7 |            2 |
+|      8 |            3 |
+|      9 |            1 |
+|     10 |            1 |
+|     11 |            1 |
+|     12 |            2 |
+|    16+ |           14 |
++--------+--------------+
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |             125 |           58 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |             155 |           59 |
+| Yes          | No                    | No                     |             122 |           34 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |             140 |           38 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++------------------------------------------------+------------------------------------------------------------+-----------------------------------------------+------------------+----------------+
+|                  Clock Signal                  |                        Enable Signal                       |                Set/Reset Signal               | Slice Load Count | Bel Load Count |
++------------------------------------------------+------------------------------------------------------------+-----------------------------------------------+------------------+----------------+
+|  accel/Accel_Calculation/E[0]                  |                                                            |                                               |                1 |              3 |
+|  accel/Accel_Calculation/xpos_reg[31]_1[0]     |                                                            |                                               |                1 |              3 |
+|  clk_IBUF_BUFG                                 | accel/ADXL_Control/FSM_sequential_StC_Adxl_Ctrl[3]_i_1_n_2 | accel/RESET_INT_reg_n_2                       |                2 |              4 |
+|  clk_IBUF_BUFG                                 | accel/ADXL_Control/Cmd_Reg[0]_4                            | accel/ADXL_Control/Cmd_Reg[0][6]_i_1_n_2      |                1 |              4 |
+|  clk_IBUF_BUFG                                 | accel/ADXL_Control/sel                                     | accel/ADXL_Control/Reset_Cnt_Num_Reads        |                1 |              4 |
+|  clk_IBUF_BUFG                                 |                                                            | accel/Accel_Calculation/ACCEL_X_CLIP[8]       |                2 |              5 |
+|  clk_IBUF_BUFG                                 | accel/ADXL_Control/Cmd_Reg[1][6]_i_2_n_2                   | accel/ADXL_Control/Cmd_Reg[1]0_in[7]          |                2 |              5 |
+|  clk_IBUF_BUFG                                 |                                                            | accel/RESET_INT_reg_n_2                       |                3 |              6 |
+|  clk_IBUF_BUFG                                 |                                                            | accel/ADXL_Control/SPI_Interface/SCLK_2X_DIV0 |                2 |              6 |
+|  clk_IBUF_BUFG                                 | accel/ADXL_Control/Cmd_Reg[2]_2                            | accel/ADXL_Control/Cmd_Reg[2]_3[7]            |                1 |              6 |
+|  sync/CLK                                      |                                                            |                                               |                3 |              7 |
+|  clk_IBUF_BUFG                                 | accel/ADXL_Control/D_Send[6]_i_1_n_2                       | accel/RESET_INT_reg_n_2                       |                2 |              7 |
+|  clk_IBUF_BUFG                                 | accel/ADXL_Control/SPI_Interface/EN_LOAD_DOUT              |                                               |                4 |              8 |
+|  clk_IBUF_BUFG                                 | accel/ADXL_Control/SPI_Interface/MOSI_REG[7]_i_1_n_2       |                                               |                2 |              8 |
+|  clk_IBUF_BUFG                                 | accel/ADXL_Control/SPI_Interface/SHIFT_TICK_IN             |                                               |                2 |              8 |
+|  clk_IBUF_BUFG                                 |                                                            | accel/Accel_Calculation/ACCEL_Y_CLIP[8]       |                2 |              9 |
+|  clk_IBUF_BUFG                                 |                                                            | accel/ADXL_Control/Cnt_SS_Inactive0           |                3 |             10 |
+|  clk_IBUF_BUFG                                 |                                                            | accel/RESET                                   |                3 |             11 |
+|  clk_IBUF_BUFG                                 |                                                            | red[3]_i_1_n_2                                |               12 |             12 |
+|  clk_IBUF_BUFG                                 |                                                            | input                                         |               11 |             12 |
+|  inner_logo_counter_BUFG                       |                                                            |                                               |               10 |             19 |
+|  video_on                                      |                                                            |                                               |                5 |             19 |
+|  clk_IBUF_BUFG                                 |                                                            | accel/ADXL_Control/Reset_Sample_Rate_Div      |                5 |             20 |
+|  clk_IBUF_BUFG                                 | accel/ADXL_Control/E[0]                                    | accel/RESET_INT_reg_n_2                       |                5 |             22 |
+|  clk_IBUF_BUFG                                 | accel/ADXL_Control/StC_Adxl_Ctrl[3]                        | accel/RESET_INT_reg_n_2                       |                7 |             24 |
+|  clk_IBUF_BUFG                                 | accel/ADXL_Control/sel                                     | accel/ADXL_Control/ACCEL_X_SUM0               |                8 |             32 |
+|  clk_IBUF_BUFG                                 | inner_logo_counter_BUFG                                    | inner_logo_counter[31]_i_1_n_2                |                9 |             32 |
+|  clk_IBUF_BUFG                                 | logo_counter[0]_i_1_n_2                                    |                                               |                8 |             32 |
+|  n_0_651_BUFG                                  |                                                            | ypos                                          |                8 |             32 |
+|  n_1_654_BUFG                                  |                                                            | xpos                                          |                8 |             32 |
+|  sync/clk_div/clk25M_i/clk_wiz_0/inst/clk_out1 | sync/hend                                                  |                                               |                8 |             32 |
+|  sync/clk_div/clk25M_i/clk_wiz_0/inst/clk_out1 |                                                            |                                               |                9 |             33 |
+|  clk_IBUF_BUFG                                 |                                                            |                                               |               29 |             41 |
+|  clk_IBUF_BUFG                                 | accel/ADXL_Control/SPI_Interface/Data_Reg_reg[4][0]        |                                               |               12 |             42 |
++------------------------------------------------+------------------------------------------------------------+-----------------------------------------------+------------------+----------------+
+
+
